@@ -12,13 +12,13 @@ const Auth = () => {
       <div className='md:w-1/2 w-full bg-white px-4  py-10 rounded'>
         <div className='flex justify-center gap-3 relative'>
           <button
-            className='border border-[#00BCD5] text-[#00BCD5] text-md px-4 py-1 font-semibold rounded hover:bg-[#00BCD5] hover:text-white'
+            className={`${showLogin ? "bg-[#00BCD5] text-[#f3f3f3]" : "border border-[#00BCD5] text-[#00BCD5] "}  text-md px-4 py-1 font-semibold rounded hover:bg-[#00BCD5] hover:text-white`}
             onClick={() => setShowLogin(true)}
           >
             Login
           </button>
           <button
-            className='border border-[#00BCD5] text-[#00BCD5] text-md px-4 py-1 font-semibold rounded hover:bg-[#00BCD5] hover:text-white'
+            className={`${showLogin ? "border border-[#00BCD5] text-[#00BCD5]" : "bg-[#00BCD5] text-[#f3f3f3]"}  text-md px-4 py-1 font-semibold rounded hover:bg-[#00BCD5] hover:text-white`}
             onClick={() => setShowLogin(false)}
           >
             Register

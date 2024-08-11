@@ -17,7 +17,6 @@ export const data = [
     about: "Voluptatem ea rerum nisi lam debitis optio. Quae odio quasi repellat sit fugiat dolor manicia et Eos non itaque ut libero dolorum hic voluptas repudiandae. Fugiat bisun quos et odit vel optio utme ptat ducim.",
     training: "Nostrud exercitation ullam co laboris nisi ut aliquip ex ea commodo consequa duis aute irure do lor in reprehen.",
     workingDays: "Sunday, Monday, tuesday",
-    workDone: 20
   },
   {
     id: 2,
@@ -28,7 +27,6 @@ export const data = [
     about: "Voluptatem ea rerum nisi lam debitis optio. Quae odio quasi repellat sit fugiat dolor manicia et Eos non itaque ut libero dolorum hic voluptas repudiandae. Fugiat bisun quos et odit vel optio utme ptat ducim.",
     training: "Nostrud exercitation ullam co laboris nisi ut aliquip ex ea commodo consequa duis aute irure do lor in reprehen.",
     workingDays: "Monday, tuesday, thursday",
-    workDone: 12
   },
   {
     id: 3,
@@ -39,7 +37,6 @@ export const data = [
     about: "Voluptatem ea rerum nisi lam debitis optio. Quae odio quasi repellat sit fugiat dolor manicia et Eos non itaque ut libero dolorum hic voluptas repudiandae. Fugiat bisun quos et odit vel optio utme ptat ducim.",
     training: "Nostrud exercitation ullam co laboris nisi ut aliquip ex ea commodo consequa duis aute irure do lor in reprehen.",
     workingDays: "Sunday, Monday, tuesday",
-    workDone: 2
   },
   {
     id: 4,
@@ -50,7 +47,6 @@ export const data = [
     about: "Voluptatem ea rerum nisi lam debitis optio. Quae odio quasi repellat sit fugiat dolor manicia et Eos non itaque ut libero dolorum hic voluptas repudiandae. Fugiat bisun quos et odit vel optio utme ptat ducim.",
     training: "Nostrud exercitation ullam co laboris nisi ut aliquip ex ea commodo consequa duis aute irure do lor in reprehen.",
     workingDays: "Sunday, Monday, tuesday",
-    workDone: 10
   }
 ]
 const Doctors = () => {

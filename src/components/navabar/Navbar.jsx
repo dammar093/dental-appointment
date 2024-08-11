@@ -10,9 +10,11 @@ import { setLogin } from '../../features/login/loginSlice';
 // it's better use state management library like zustand and redux to make gobal state
 
 export const user = {
+  id: 1,
   fullName: "John Doe",
   email: "johndoe12@gmail.com",
-  avatar: doctor1
+  avatar: doctor1,
+  role: "patient"
   // other details also included 
 }
 
@@ -39,19 +41,25 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to={"/my-appontment"}
-              className={({ isActive }) => isActive ? "text-[#00BCD5] md:text-[1.2vw] font-semibold t" : " md:text-[1.2vw] font-semibold text-gray-600 hover:text-[#00BCD5]"}   >
-              My Appoitments
-            </NavLink>
+            {
+              user && user.role === "patient" ? <NavLink
+                to={"/my-appontment"}
+                className={({ isActive }) => isActive ? "text-[#00BCD5] md:text-[1.2vw] font-semibold t" : " md:text-[1.2vw] font-semibold text-gray-600 hover:text-[#00BCD5]"}   >
+                My Appoitments
+              </NavLink> : user && user.role === "doctor" ? <NavLink
+                to={"/doctor-panel"}
+                className={({ isActive }) => isActive ? "text-[#00BCD5] md:text-[1.2vw] font-semibold t" : " md:text-[1.2vw] font-semibold text-gray-600 hover:text-[#00BCD5]"}   >
+                Doctor Panel
+              </NavLink>
+                : user && user.role === "admin" ? <NavLink
+                  to={"/dashboard"}
+                  className={({ isActive }) => isActive ? "text-[#00BCD5] md:text-[1.2vw] font-semibold t" : " md:text-[1.2vw] font-semibold text-gray-600 hover:text-[#00BCD5]"}   >
+                  Dashboard
+                </NavLink>
+                  : ""
+            }
           </li>
-          <li>
-            <NavLink
-              to={"/service"}
-              className={({ isActive }) => isActive ? "text-[#00BCD5] md:text-[sm] md:text-[1.2vw] font-semibold" : " text-[sm] md:text-[1.2vw] font-semibold text-gray-600 hover:text-[#00BCD5]"} >
-              Services
-            </NavLink>
-          </li>
+
           <li>
             <NavLink
               to={"/contact"}
@@ -110,22 +118,35 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className='mt-6'>
-              <NavLink
-                to={"/my-appontment"}
-                className="text-[#f3f3f3] text-3xl"
-                onClick={() => setMenu(prev => !prev)}
-              >
-                My Appoitments
-              </NavLink>
-            </li>
-            <li className='mt-6'>
-              <NavLink
-                to={"/service"}
-                className="text-[#f3f3f3] text-3xl"
-                onClick={() => setMenu(prev => !prev)}
-              >
-                Services
-              </NavLink>
+              {
+                user && user.role === "patient" ?
+                  <NavLink
+                    to={"/my-appontment"}
+                    className="text-[#f3f3f3] text-3xl"
+                    onClick={() => setMenu(prev => !prev)}
+                  >
+                    My Appoitments
+                  </NavLink>
+                  :
+                  user && user.role === "doctor" ?
+                    <NavLink
+                      to={"/doctor-panel"}
+                      className="text-[#f3f3f3] text-3xl"
+                      onClick={() => setMenu(prev => !prev)}
+                    >
+                      Doctor Panel
+                    </NavLink>
+                    :
+                    user && user.role === "admin" ?
+                      <NavLink
+                        to={"/dashboard"}
+                        className="text-[#f3f3f3] text-3xl"
+                        onClick={() => setMenu(prev => !prev)}
+                      >
+                        Dashboard
+                      </NavLink>
+                      : ""
+              }
             </li>
             <li className='mt-6'>
               <NavLink

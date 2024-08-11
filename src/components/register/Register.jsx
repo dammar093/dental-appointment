@@ -1,10 +1,14 @@
 import { data } from 'autoprefixer'
 import axios from 'axios'
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import { FaCamera } from "react-icons/fa";
 import { useForm } from 'react-hook-form'
 
 const Register = () => {
-  const { handleSubmit, register, formState: { errors } } = useForm()
+  const [file, setFile] = useState(null)
+  const [url, setUrl] = useState(null)
+  const { handleSubmit, register, setValue, formState: { errors } } = useForm()
+  const avatarRef = useRef()
 
   // function for registering
   async function sendDataToResgister(data) {
@@ -12,6 +16,8 @@ const Register = () => {
       // const res = await axios.post("url end point is here", data)
       //   const data = await res.data
       // send the data in global state
+      setUrl(null)
+      setFile(null)
     } catch (error) {
       console.log(error);
 
@@ -22,9 +28,40 @@ const Register = () => {
     console.log(data);
     sendDataToResgister()
   }
+  const handeAvatar = (e) => {
+    const selectedFile = e.target.files[0]
+    const url = URL.createObjectURL(selectedFile)
+    setValue('avatar', selectedFile)
+    setUrl(url)
+
+  }
+
   return (
     <div className='w-full'>
       <form method='post' onSubmit={handleSubmit(handleRegister)}>
+        <div className='mt-4 w-full'>
+          <div className='w-[100px] h-[100px] rounded-full overflow-hidden mx-auto  border-[#00BCD5] border-2'>
+            <div className='w-full h-full rounded-full bg-[#80808084] flex items-center justify-center cursor-pointer'
+
+            >
+              {
+                url ? <img src={url} alt={url} /> :
+                  <FaCamera className='text-3xl text-gray-500'
+                    onClick={() => avatarRef.current.click()} />
+              }
+            </div>
+            <div>
+
+            </div>
+          </div>
+          <input type="file" hidden ref={avatarRef} accept='image/*'
+            onChange={handeAvatar}
+          />
+          {
+            errors.avatar &&
+            <p className="text-red-500 text-center">{errors.avatar.message}</p>
+          }
+        </div>
         <div className=' mt-4'>
           <div className='w-full h-10 rounded-md bg-slate-300 text-gray-600'>
             <input

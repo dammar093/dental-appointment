@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { setLogin } from '../../features/login/loginSlice'
 const AuthLayout = ({ children }) => {
   const dispatch = useDispatch()
-  if (!user) {
+  if (!user && user.role === "patient") {
     dispatch(setLogin(true))
   }
   return (

@@ -10,8 +10,9 @@ import { Provider } from 'react-redux'
 import store from './store/store.js'
 import AuthLayout from './components/authLayout/AuthLayout.jsx'
 import MyAppointment from './pages/my-appointment/MyAppointment.jsx'
-import Service from './pages/service/Service.jsx'
 import Contact from './pages/contact/Contact.jsx'
+import Dashboard from './pages/dashboard/Dashboard.jsx'
+import DoctorPanel from './pages/doctor-panel/DoctorPanel.jsx'
 
 const router = createBrowserRouter([
   {
@@ -27,10 +28,6 @@ const router = createBrowserRouter([
         element: <AuthLayout><MyAppointment /></AuthLayout>
       },
       {
-        path: "service",
-        element: < Service />
-      },
-      {
         path: "contact",
         element: <Contact />
       },
@@ -41,6 +38,14 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile />
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />
+      },
+      {
+        path: "/doctor-panel",
+        element: <DoctorPanel />
       }
     ]
   }
