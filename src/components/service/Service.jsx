@@ -22,7 +22,7 @@ const Service = () => {
     },
     {
       id: 3,
-      img: s3,
+      img: s1,
       title: "Tingling Sensation-pulpitis",
       para: "Imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus."
     }

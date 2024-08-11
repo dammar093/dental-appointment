@@ -14,7 +14,7 @@ export const user = {
   fullName: "John Doe",
   email: "johndoe12@gmail.com",
   avatar: doctor1,
-  role: "patient"
+  role: "admin"
   // other details also included 
 }
 

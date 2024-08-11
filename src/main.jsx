@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "my-appontment",
-        element: <AuthLayout><MyAppointment /></AuthLayout>
+        element: <AuthLayout> <MyAppointment /></AuthLayout>
       },
       {
         path: "contact",
