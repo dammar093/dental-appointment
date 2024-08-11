@@ -3,6 +3,7 @@ import doctor1 from "../../assets/doctor1.jpg"
 import doctor2 from "../../assets/doctor2.jpg"
 
 const MyAppointment = () => {
+  // this is the hard coded data in future it will comes from backen
   const appointmentData = [
     {
       id: 1,
@@ -29,6 +30,7 @@ const MyAppointment = () => {
   ]
   return (
     <section className='w-full overflow-x-scroll scroll-smooth mt-3 relative min-h-[80vh]'>
+
       <table className="table-auto min-w-[80vw] w-full border-spacing-2 px-5 ">
         <thead className='text-[#f3f3f3] bg-[#AE56Ef] font-medium px-5 my-4'>
           <tr>
@@ -40,6 +42,7 @@ const MyAppointment = () => {
             <th className='text-left px-2'>Appointing Date</th>
             <th className='text-left px-2'>Appointment Status</th>
             <th className='text-left px-2'>Appointment Date</th>
+            <th className='px-2'>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -58,6 +61,8 @@ const MyAppointment = () => {
                   <td className='text-gray-600 font-medium text-md  px-2 capitalize'>{appDetail.appointingDate}</td>
                   <td className='text-gray-600 font-medium text-md  px-2 capitalize'>{appDetail.appointStatus}</td>
                   <td className='text-gray-600 font-medium text-md  px-2 capitalize'>{appDetail.appointmentDate}</td>
+                  <td> <button className={"bg-[red] text-[#f3f3f3] text-[15px] px-4 py-1 flex rounded  items-center capitalize transition-all hover:bg-[#932323] "}
+                  ><div className='flex items-center gap-1 '> <MdOutlineDelete /><span>Delete</span></div></button></td>
                 </tr>
               )
             })

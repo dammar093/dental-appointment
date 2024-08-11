@@ -10,21 +10,21 @@ const Service = () => {
   const serviceData = [
     {
       id: 1,
-      img: s3,
+      image: s3,
       title: "Dental Filling for Cavities",
-      para: "Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh."
+      description: "Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh."
     },
     {
       id: 2,
-      img: s2,
+      image: s2,
       title: "Regular Dental Cleaning",
-      para: "Duis leo sed fringilla mauris sit amet nibh. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt."
+      description: "Duis leo sed fringilla mauris sit amet nibh. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt."
     },
     {
       id: 3,
-      img: s1,
+      image: s1,
       title: "Tingling Sensation-pulpitis",
-      para: "Imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus."
+      description: "Imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus."
     }
   ]
 

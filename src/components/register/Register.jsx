@@ -38,7 +38,7 @@ const Register = () => {
 
   return (
     <div className='w-full'>
-      <form method='post' onSubmit={handleSubmit(handleRegister)}>
+      <form method='post' onSubmit={handleSubmit(handleRegister)} encType='multipart/form-data'>
         <div className='mt-4 w-full'>
           <div className='w-[100px] h-[100px] rounded-full overflow-hidden mx-auto  border-[#00BCD5] border-2'>
             <div className='w-full h-full rounded-full bg-[#80808084] flex items-center justify-center cursor-pointer'

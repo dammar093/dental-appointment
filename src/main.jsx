@@ -13,6 +13,9 @@ import MyAppointment from './pages/my-appointment/MyAppointment.jsx'
 import Contact from './pages/contact/Contact.jsx'
 import Dashboard from './pages/dashboard/Dashboard.jsx'
 import DoctorPanel from './pages/doctor-panel/DoctorPanel.jsx'
+import Service from './pages/services/Service.jsx'
+import User from './pages/user/User.jsx'
+import Appointment from './pages/appointment/Appointment.jsx'
 
 const router = createBrowserRouter([
   {
@@ -46,7 +49,19 @@ const router = createBrowserRouter([
       {
         path: "/doctor-panel",
         element: <DoctorPanel />
-      }
+      },
+      {
+        path: "/service",
+        element: <Service />
+      },
+      {
+        path: "/user",
+        element: <User />
+      },
+      {
+        path: "/appointmet",
+        element: <Appointment />
+      },
     ]
   }
 ])
